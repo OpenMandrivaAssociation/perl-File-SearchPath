@@ -10,6 +10,7 @@ URL:		http://search.cpan.org/dist/%{real_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/T/TJ/TJENNESS/%{real_name}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module provides the ability to search a path-like environment variable for
