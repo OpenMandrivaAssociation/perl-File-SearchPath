@@ -2,7 +2,7 @@
 
 Summary:	Search for a file in an environment variable path
 Name:		perl-%{real_name}
-Version:	0.02
+Version:	0.03
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
