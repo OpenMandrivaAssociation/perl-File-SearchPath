@@ -1,5 +1,5 @@
 %define upstream_name    File-SearchPath
-%define upstream_version 0.05
+%define upstream_version 0.06
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -22,15 +22,15 @@ a file (that does not necessarily have to be an executable).
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%{__perl} Build.PL installdirs=vendor
+./Build
 
 %check
-make test
+./Build test
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
+./Build install destdir=%{buildroot}
 
 %clean 
 rm -rf %{buildroot}
@@ -39,4 +39,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README
 %{perl_vendorlib}/File/SearchPath.pm
-%attr(0644,root,root) %{_mandir}/man3/File::SearchPath.3pm*
+%{_mandir}/man3/File::SearchPath.3pm*
