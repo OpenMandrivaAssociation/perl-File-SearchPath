@@ -1,15 +1,15 @@
 %define upstream_name    File-SearchPath
-%define upstream_version 0.06
+%define upstream_version 0.07
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Search for a file in an environment variable path
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/T/TJ/TJENNESS/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/timj/perl-File-SearchPath
+Source0:	https://cpan.metacpan.org/authors/id/T/TJ/TJENNESS/File-SearchPath-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Module::Build)
