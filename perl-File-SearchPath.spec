@@ -1,15 +1,13 @@
 %define upstream_name    File-SearchPath
-%define upstream_version 0.07
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.07
+Release:	2
 
 Summary:	Search for a file in an environment variable path
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/timj/perl-File-SearchPath
-Source0:	https://cpan.metacpan.org/authors/id/T/TJ/TJENNESS/File-SearchPath-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/T/TJ/TJENNESS/File-SearchPath-%{version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Module::Build)
@@ -20,7 +18,7 @@ This module provides the ability to search a path-like environment variable for
 a file (that does not necessarily have to be an executable).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Build.PL installdirs=vendor
@@ -44,9 +42,7 @@ perl Build.PL installdirs=vendor
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.50.0-1mdv2011.0
 + Revision: 403179
-- rebuild using %%perl_convert_version
-
-* Thu Feb 26 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.05-1mdv2009.1
+- rebuild using %0.07 Thu Feb 26 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.05-1mdv2009.1
 + Revision: 345100
 - update to new version 0.05
 
